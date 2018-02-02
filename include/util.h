@@ -5,7 +5,9 @@
 
 #define unused __attribute__((unused))
 
-#define eprinterrno(format, ...) fprintf(stderr, "%s:%d: Error on " format ": %s\n", __FILE__, __LINE__, ##__VA_ARGS__, strerror(errno))
+#define eprinterrno(format, ...) fprintf(stderr, \
+    "%s:%d: Error on " format ": %s\n", __FILE__, \
+    __LINE__, ##__VA_ARGS__, strerror(errno))
 
 #define DIE(condition, format, ...) \
     do { \

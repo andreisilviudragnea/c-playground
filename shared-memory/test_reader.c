@@ -1,14 +1,14 @@
 #include "common.h"
 #include "util.h"
 
-#include <stdio.h>
-#include <signal.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/mman.h>
-#include <fcntl.h>
 #include <errno.h>
+#include <fcntl.h>
 #include <semaphore.h>
+#include <signal.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/mman.h>
+#include <unistd.h>
 
 static volatile sig_atomic_t loop = 1;
 
@@ -42,8 +42,9 @@ int main(int argc unused, char *argv[] unused)
         DIE(sem_wait(read_sem) == -1, "sem_wait read_sem");
 
         /* Writer encountered EOF */
-        if (shmp->cnt == 0)
+        if (shmp->cnt == 0) {
             break;
+        }
 
         ssize_t num_written = write(STDOUT_FILENO, shmp->buf, shmp->cnt);
         DIE(num_written == -1 || (size_t) num_written != shmp->cnt, "write");

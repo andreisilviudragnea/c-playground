@@ -2,13 +2,13 @@
 #include "util.h"
 
 #include <errno.h>
-#include <stdio.h>
-#include <signal.h>
-#include <memory.h>
-#include <unistd.h>
-#include <sys/mman.h>
 #include <fcntl.h>
 #include <semaphore.h>
+#include <signal.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/mman.h>
+#include <unistd.h>
 
 static volatile sig_atomic_t loop = 1;
 

@@ -1,2 +1,2 @@
-# c_playground
+# c-playground
 Miscellaneous example C programs

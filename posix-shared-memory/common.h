@@ -1,5 +1,4 @@
-#ifndef PROJECT_COMMON_H
-#define PROJECT_COMMON_H
+#pragma once
 
 #include <sys/types.h>
 
@@ -15,5 +14,3 @@ struct shmseg {                 /* Defines structure of shared memory segment */
     size_t cnt;                 /* Number of bytes used in 'buf' */
     char buf[BUF_SIZE];         /* Data being transferred */
 };
-
-#endif //PROJECT_COMMON_H

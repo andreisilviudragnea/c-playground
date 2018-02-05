@@ -1,5 +1,4 @@
-#ifndef PROJECT_UTIL_H
-#define PROJECT_UTIL_H
+#pragma once
 
 #include <stdlib.h>
 
@@ -16,5 +15,3 @@
             exit(EXIT_FAILURE); \
         } \
     } while (0)
-
-#endif //PROJECT_UTIL_H

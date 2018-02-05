@@ -8,6 +8,7 @@ add_compile_options(
         -Wstrict-prototypes
         -Wmissing-prototypes
         -Wmissing-declarations
+        -Wunused-macros
         -O3
         -flto)
 include_directories(include)

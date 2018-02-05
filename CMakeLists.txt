@@ -12,4 +12,4 @@ add_compile_options(
         -flto)
 include_directories(include)
 
-add_subdirectory(shared-memory)
+add_subdirectory(posix-shared-memory)

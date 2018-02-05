@@ -52,8 +52,8 @@ int main(int argc unused, char *argv[] unused)
 
     DIE(ftruncate(fd, BUF_SIZE) == -1, "ftruncate");
 
-    struct shmseg *shmp = mmap(NULL, BUF_SIZE, PROT_READ | PROT_WRITE,
-                               MAP_SHARED, fd, 0);
+    struct shmseg *shmp =
+        mmap(NULL, BUF_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
     DIE(shmp == MAP_FAILED, "mmap");
 
     DIE(close(fd) == -1, "close");
